@@ -10,7 +10,7 @@ class User:
 
 @pytest.fixture
 def user():
-    yield user
+    yield User()
 
 
 def test_remove_name(user):
