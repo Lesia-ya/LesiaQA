@@ -1,5 +1,6 @@
 import subprocess
 import pytest
+import pytest_gitpull
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_configure(config):
