@@ -15,4 +15,4 @@ def test_second_request():
 
     assert body['name'] == 'Chris Wanstrath'
     assert r.status_code == 200
-    assert headers['Server'] == 'GitHub.com'
+    assert headers['Server'] == 'github.com'
