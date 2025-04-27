@@ -1,4 +1,4 @@
-import pytest
+giimport pytest
 import requests
 
 
@@ -16,3 +16,8 @@ def test_second_request():
     assert body['name'] == 'Chris Wanstrath'
     assert r.status_code == 200
     assert headers['Server'] == 'github.com'
+
+@pytest.mark.http
+def test_status_code_request():
+    r = requests.get('https://api.github.com/users/sergii_butenko')
+    assert r.status_code == 200
