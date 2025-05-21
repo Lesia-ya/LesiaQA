@@ -26,6 +26,12 @@ def test_check_incorrect_username():
 
     # Вводимо неправильний пароль
     pass_elem.send_keys("wrong password")
+
+    # Знаходимо кнопку sign in
+    btn_elem = driver.find_element(By.NAME, "commit")
+
+    # Емулюємо клік лівою кнопкою мишки
+    btn_elem.click()
     time.sleep(3)
     
     # Закриваємо браузер
