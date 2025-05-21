@@ -4,6 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+import time
 
 @pytest.mark.ui
 def test_check_incorrect_username():
@@ -19,7 +20,7 @@ def test_check_incorrect_username():
 
     # Вводимо неправильне ім'я користувача або поштову адресу
     login_elem.send_keys("sergiibutenko@mistakeinemail.com")
-
+    time.sleep(3)
 
 
         # Закриваємо браузер
