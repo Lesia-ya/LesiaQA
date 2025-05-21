@@ -20,8 +20,13 @@ def test_check_incorrect_username():
 
     # Вводимо неправильне ім'я користувача або поштову адресу
     login_elem.send_keys("sergiibutenko@mistakeinemail.com")
+    
+    # Знаходимо поле, в яке будемо вводити неправильний пароль
+    pass_elem = driver.find_element(By.ID, "password")
+
+    # Вводимо неправильний пароль
+    pass_elem.send_keys("wrong password")
     time.sleep(3)
-
-
-        # Закриваємо браузер
+    
+    # Закриваємо браузер
     driver.close()
